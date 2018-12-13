@@ -8,11 +8,6 @@ import android.net.ParseException;
 import android.support.annotation.NonNull;
 
 import com.acmenxd.retrofit.HttpManager;
-import com.acmenxd.retrofit.exception.HttpException;
-import com.acmenxd.retrofit.exception.HttpNoDataBodyException;
-import com.acmenxd.retrofit.exception.HttpNoDataTypeException;
-import com.acmenxd.retrofit.exception.HttpNoWorkException;
-import com.acmenxd.retrofit.exception.HttpResponseException;
 import com.google.gson.JsonParseException;
 
 import org.apache.http.conn.ConnectTimeoutException;
@@ -29,7 +24,7 @@ import javax.net.ssl.SSLHandshakeException;
  * @version v1.0
  * @github https://github.com/AcmenXD
  * @date 2017/1/5 11:16
- * @detail 网络状态码
+ * @detail 网络状态码解析
  */
 
 public final class HttpError {
