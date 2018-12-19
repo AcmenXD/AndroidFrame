@@ -216,14 +216,14 @@ public enum HttpManager {
             builder.addInterceptor(new LoggerInterceptor());
         }
         // 启用Gzip压缩
-        // mClientBuilder.addInterceptor(new GzipInterceptor());
+        // builder.addInterceptor(new GzipInterceptor());
         // 设置缓存
         if (net_cache_type != 0) {
             // mBuilder.addNetworkInterceptor(new NetCacheInterceptor3()); // 功能尚未完成,无法使用
             builder.cache(new Cache(net_cache_dir, net_cache_size * 1024 * 1024));
         }
         // 启用cookie -> 参考http://www.jianshu.com/p/1a5f14b63f47
-        // mClientBuilder.cookieJar(new PersistentCookieJar(new SetCookieCache(), new SharedPrefsCookiePersistor(context)));
+        // builder.cookieJar(new PersistentCookieJar(new SetCookieCache(), new SharedPrefsCookiePersistor(context)));
         builder.cookieJar(HttpCookieJar.create());
         // 失败重试
         builder.retryOnConnectionFailure(true);
