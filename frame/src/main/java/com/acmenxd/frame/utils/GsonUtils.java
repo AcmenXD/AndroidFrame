@@ -17,19 +17,11 @@ import java.util.List;
  * @detail Gson工具类
  */
 public class GsonUtils {
-    //    [{
-    //        "type": "123",
-    //            "value": 123
-    //    },
-    //    {
-    //        "type": "234",
-    //            "value": 234
-    //    }]
-
     /**
      * 直接解析数组结构的json
+     * // [{"type": "123","value": 123},{"type": "234","value": 234}]
      *
-     * @return List<City> bean = jsonToList(province, City[].class)
+     * @return List<Data> bean = jsonToList(json, Data[].class)
      */
     public static <T> List<T> jsonToList(String json, Class<T[]> pClass) {
         Gson gson = new Gson();
@@ -39,8 +31,9 @@ public class GsonUtils {
 
     /**
      * 直接解析数组结构的json
+     * // [{"type": "123","value": 123},{"type": "234","value": 234}]
      *
-     * @return ArrayList<City> bean = jsonToArrayList(province, City.class);
+     * @return ArrayList<Data> bean = jsonToArrayList(json, Data.class);
      */
     public static <T> ArrayList<T> jsonToArrayList(String json, Class<T> pClass) {
         Type type = new TypeToken<ArrayList<JsonObject>>() {
